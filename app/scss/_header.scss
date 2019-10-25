@@ -98,6 +98,56 @@ $header-min-menu: 70px;
 		}
 	}
 }
+.menbar{
+	background-color: $color-1;
+	width: 430px;
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	z-index: 111;
+	right: 0;
+
+}
+.menbar-logo{
+	.img{
+		background-size: contain;
+		width: 270px;
+		height: 100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.menbar-content{
+	color: white;
+	width: 340px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	
+	
+	& > ul > li > a{
+		&:before{
+			@extend .clafclear;
+			background-color: rgba(white, 0.1);
+			width: 430px;
+			left: -60px;
+			height: 38px;
+			top: 0;
+			pointer-events: none;
+		}
+	}
+	li{
+		font-weight: 600;
+		position: relative;
+		padding-top: 10px;
+		margin: 1px 0;
+		padding-bottom: 10px;
+	}
+}
+
+
 
 .header-info{
 	@media (min-width: 992px) {
