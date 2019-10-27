@@ -24,29 +24,54 @@
 
 		<div class="menbar">
 			<div class="wrapper">
+				<span class="menbar-btn-toggle" role="button" data-toggle-menbar>
+					<i class="fa fa-close"></i>
+				</span>
 				<div class="menbar-logo">
 					<div class="img" style="background-image: url('img/logo.png');"></div>
 				</div>
-				<div class="menbar-content">
-							<ul>
-								<li><a href="">Главная</a></li>
-								<li><a href="">О нас</a></li>
-								<li><a href="#barli-3" data-toggle="collapse" data-parent="#collapse-bar">Услуги</a>
-									<div id="barli-3" class="panel-collapse collapse" role="tabpanel">
-										<div class="panel-body">
-											<ul>
-												<li><a href="">Архитектура</a></li>
-												<li><a href="">Интерьера</a></li>
-												<li><a href="">Городской дизайн</a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li><a href="">Портфолио</a></li>
-								<li><a href="">Строительно-монтажные работы</a></li>
-								<li><a href="">Ввод в эксплуатацию</a></li>
-								<li><a href="">Судебные вопросы</a></li>
-							</ul>
+				<div class="adab-scroll">
+					<div class="menbar-menu">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li><a href="">О нас</a></li>
+							<li><a href="#barli-3" data-toggle="collapse" data-parent="#collapse-bar">Услуги</a>
+								<div id="barli-3" class="panel-collapse collapse" role="tabpanel">
+									<ul>
+										<li><a href="">Архитектура</a></li>
+										<li><a href="">Интерьера</a></li>
+										<li><a href="">Городской дизайн</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="">Портфолио</a></li>
+							<li><a href="">Строительно-монтажные работы</a></li>
+							<li><a href="">Ввод в эксплуатацию</a></li>
+							<li><a href="">Судебные вопросы</a></li>
+						</ul>
+					</div>
+					<div class="menbar-footer">
+						<div class="flex-adaptive m-v-10">
+							<div class="icon-content">
+								<i class="icm icm-phone-call"></i>
+							</div>
+							<div>
+								<p><b>Телефон:</b></p>
+								<p>(998 99) <b>006-09-00</b></p>
+								<p>(998 95) <b>195-09-00</b></p>
+								<p>(998 97) <b>732-79-00</b></p>
+							</div>
+						</div>
+						<div class="flex-adaptive m-v-10">
+							<div class="icon-content">
+								<i class="icm icm-envelope"></i>
+							</div>
+							<div>
+								<p><b>Email:</b></p>
+								<p>archiquad@gmail.com</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -76,7 +101,7 @@
 										<a href="tel:+998990060900"><big>+998 99 <b>006-09-00</b></big></a>
 									</div>
 									<div class="header-bar">
-										<div class="bar" role="button">
+										<div class="bar" role="button" data-toggle-menbar>
 											<span class="icon-bar"></span>
 											<span class="icon-bar"></span>
 											<span class="icon-bar"></span>
@@ -92,11 +117,6 @@
 
 
 		</header>
-		<!-- MIN MENU -->
-		<div id="min-menu" data-aos="fade">
-			<ul>
-			</ul>
-		</div>
 		<!-- MIN MENU HEADER -->
 		<div class="min-menu-header hidden-md hidden-lg">
 			<div class="wrapper-bg"></div>
@@ -116,7 +136,7 @@
 			</div>
 			<div class="min-menu-bar col-xs-2">
 				<a href="#min-menu">
-					<div class="bar">
+					<div class="bar" data-toggle-menbar>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -174,6 +194,13 @@
 							</div>
 						</figure>
 
+					</div>
+					<div class="bnr-btn-feedback">
+						<a href="">
+							<i class="mirror icm icm-phone-call"></i>
+							<i class="icm icm-phone-call"></i>
+							<p>Оставить заявку</p>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -595,6 +595,7 @@ div.owl-nav{
 		opacity: 1;
 		border: none;
 		cursor: pointer;
+		background-color: darken($color-1, 5%);
 		.arrow{
 			fill: white;
 		}
@@ -606,6 +607,7 @@ div.owl-nav{
 	svg{
 		width: 50px;
 		display: block;
+		transform: scale(0.5);
 		height: 50px;
 		//display: inline-block;
 	}
