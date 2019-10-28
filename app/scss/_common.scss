@@ -18,7 +18,7 @@ $font-family-3: sans-serif;
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray-1: #f6f6f6; //#bdbdbd
+$color-gray-1: #f5f5f5; //#bdbdbd
 $color-gray-2: #eeeeee;
 $color-gray-3: #c8c8c8;
 $color-gray-4: #666666;
@@ -622,7 +622,7 @@ table {
 
 .btn-def, .btn-icon{
 	@extend .btn-style;
-	transition: all 0.2s ease;
+	transition: all 0.4s ease-in;
 	*{
 		color: inherit;
 	}
@@ -631,31 +631,39 @@ table {
 		font-size: 0.75em;
 	}
 	position: relative;
-	&:before, &:after{
+	&:before{
 		@extend .clafclear;
-		background-color: rgba(white, 0.11);
-		left: -100%;
-		width: 70%;
-		transition: all 0.5s linear;
-		filter: blur(1px);
+		background-color: $color-1;
+		left: 0;
+		width: 50px;
+		transition: all 0.5s ease-out;
 		pointer-events: none;
-		top: 0;
-	}
-	&:after{
-		transition-delay: 0.3s;
 	}
 	&:not([class*="color-"]):not([class*="bg-color"]){
 		
 	}
 	&:not([class*="bg-color"]){
-		background-image: linear-gradient(to right, $color-1, $color-1);
-    background-position: -170px center;
-    background-repeat: no-repeat;
-    position: relative;
-	}	
+		
+	}
+	&.stand{
+		background-color: $color-1;
+		color: white;
+		&:hover{
+			background-color: lighten($color-1, 5%);
+		}
+		&:before{
+			display: none;
+		}
+		a, button{
+			padding: 12px 15px;
+		}
+	}
 	//hover
 	&:not(.changecolor-none):hover{
-		background-position: 0 center;
+		color: white;
+		&:before{
+			width: 100%;
+		}
 	}
 	&.icon-right{
 		span{
@@ -876,7 +884,7 @@ body{
 	background-color: white;
 	background-repeat: repeat-y;
 	//animation: bodyanime 900s linear infinite;
-	background-position: center -100px;
+	//background-position: center -100px;
 }
 
 
@@ -967,7 +975,7 @@ thined{
 h1,h2,h3,h4,h5{
 	color: inherit;
 	line-height: 140%;
-	font-weight: 500;
+	font-weight: 400;
 	font-family: $font-family-1;
 }
 
@@ -1123,14 +1131,15 @@ html{
 	.form-control{
 		border-radius: 0;
 		background-color: white;
-		border: 1px solid $color-gray-3;
-		border-radius: 5px;
+		border: 1px solid $color-gray-2;
 		&:focus{
-			border-color: $color-1;
+			border-color: rgba($color-1, 0.2);
 		}
 	}
 	input.form-control{
-		height: 42px;
+		height: 60px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	textarea.form-control{
 		height: 130px;

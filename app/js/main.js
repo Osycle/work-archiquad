@@ -49,16 +49,15 @@
 
 
 
-		$(".short-special-items.owl-carousel").owlCarousel({
+		$(".short-reviews-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
-			dots: true,
+			dots: false,
 			dotsEach: true,
 			autoplay: true,
 			touchDrag: false,
 			responsive:{
-				0:{items:1},
-				991:{items:2}
+				0:{items:1}
 			},
 			navText : owlBtn,
 			margin: 30
