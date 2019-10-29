@@ -124,7 +124,7 @@
 				<div class="min-menu-logo">
 					<div>
 						<a href="index.html" title="">
-							<div class="img" style="background-image: url('img/logo.png');"></div>
+							<div class="img" style="background-image: url('img/logo-black.png');"></div>
 						</a>
 					</div>	
 				</div>
@@ -185,7 +185,7 @@
 												<h1>АРХИТЕКТУРНЫЕ РЕШЕНИЯ И ДИЗАЙН-ПРОЕКТЫ</h1>
 												<p>Многолетний опыт работы, способствующий эффективной реализации проектов в кратчайшие сроки</p>
 												<span class="btn-def icon-right m-v-15">
-													<a href=""><span>УЗНАТЬ ПОДРОБНЕЕ</span> <i class="icm icm-right-arrow"></i></a>
+													<a href=""><span>ПОСМОТРЕТЬ ПОРТФОЛИО</span> <i class="icm icm-right-arrow"></i></a>
 												</span>
 											</div>
 										</div>
@@ -193,7 +193,6 @@
 								</div>
 							</div>
 						</figure>
-
 					</div>
 					<div class="bnr-btn-feedback">
 						<a href="">
@@ -201,6 +200,13 @@
 							<i class="icm icm-phone-call"></i>
 							<p>Оставить заявку</p>
 						</a>
+					</div>
+					<div class="lang container">
+						<ul>
+							<li><a href="">ENG</a></li>
+							<li class="active"><a href="">RUS</a></li>
+						</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -483,7 +489,6 @@
 								</div>
 							</div>
 						</figure>
-
 					</div>
 				</div>
 			</div>
@@ -514,14 +519,17 @@
 				</div>
 			</div>
 
+			
+			<br><br><br>
 		</main><!-- ./MAIN -->
 		<!-- FOOTER -->
 		<footer id="footer" class="text-center-sm">
 			<div class="container">
-				<div class="footer-content">
-					<div class="col-md-5 footer-info">
+				<div class="footer-content row">
+					<div class="col-md-5 footer-info p-h-15">
+						<span class="mirror-icon icm-phonebook"></span>
 						<h2>Адрес и контакты:</h2>
-						<div class="flex-adaptive m-v-10">
+						<div class="flex-adaptive m-v-15">
 							<div class="icon-content">
 								<i class="icm icm-phone-call"></i>
 							</div>
@@ -532,7 +540,7 @@
 								<p>(998 97) <b>732-79-00</b></p>
 							</div>
 						</div>
-						<div class="flex-adaptive m-v-10">
+						<div class="flex-adaptive m-v-15">
 							<div class="icon-content">
 								<i class="icm icm-envelope"></i>
 							</div>
@@ -541,6 +549,18 @@
 								<p>archiquad@gmail.com</p>
 							</div>
 						</div>
+						<div class="flex-adaptive m-v-15">
+							<div class="icon-content">
+								<i class="icm icm-address"></i>
+							</div>
+							<div>
+								<p><b>Адрес:</b></p>
+								<p>Ташкент, ул. Зульфияхоним, дом 2, офис 1,  100128, Узбекистан</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 contacts-map clearfix p-h-15">
+						<div class="map-canvas map-container"></div>
 					</div>
 				</div>
 			</div>
@@ -553,7 +573,7 @@
 						</div>
 						<div class="dev col-md-6 hidden-xs p-h-15 hidden-sm text-right-md p-v-10">
 							<p>
-								<a href="https://www.life-style.uz" class="link" title="Создание и продвижение сайтов">Создание сайтов <em><span class="color-1">Life </span></em>Style</a>
+								<a href="https://www.life-style.uz" class="link" title="Создание и продвижение сайтов">Создание сайтов <em><span style="color:#d50938;">Life </span></em>Style</a>
 							</p>
 						</div>
 					</div>
@@ -565,7 +585,148 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
+  <script type="text/javascript">
+  	var mapEls =  document.getElementsByClassName("map-canvas");
+  	var dotsArray = [
+  		{
+  			coordinates: [41.34765, 69.354354343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		},
+  		{
+  			coordinates: [41.33765, 69.354454343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		}
+  	];
+    var mapStyles = [{
+      "featureType": "landscape",
+      "stylers": [
+        { "visibility": "on" },
+        { "hue": "#0033ff" },
+        { "saturation": -100 },
+        { "lightness": 77 },
+        { "gamma": 0.34 }
+      ]
+    }, {
+      "featureType": "water",
+      "stylers": [
+        { "visibility": "on" },
+        { "hue": "#ff0000" },
+        { "saturation": -100 },
+        { "lightness": 23 },
+        { "gamma": 1 }
+      ]
+    }, {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    }, {
+      "featureType": "administrative",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    }, {
+      "featureType": "administrative",
+      "elementType": "labels",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    }, {
+      "featureType": "poi",
+      "stylers": [
+        { "visibility": "on" },
+        { "hue": "#ff0000" },
+        { "saturation": -100 },
+        { "lightness": 0 },
+        { "gamma": 1 }
+      ]
+    }, {
+      "featureType": "road",
+      "stylers": [
+        { "visibility": "on" },
+        { "hue": "#ff0000" },
+        { "saturation": -100 },
+        { "lightness": 0 },
+        { "gamma": 1 }
+      ]
+    }, {
+      "featureType": "transit",
+      "stylers": [
+        { "visibility": "on" },
+        { "hue": "#ff0000" },
+        { "saturation": -100 },
+        { "lightness": 0 },
+        { "gamma": 1 }
+      ]
+    }];
+	  if (mapEls.length) {
+	    var map;
+	    function initialize(mapEl, properties) {
 
+	      var mapOptions = {
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        mapTypeControl: false,
+	        zoom: 15,
+	        zoomControl: true,
+	        zoomControlOptions: {
+	          style: google.maps.ZoomControlStyle.DEFAULT,
+	          position: google.maps.ControlPosition.DEFAULT
+	        },
+	        panControl: true,
+	        panControlOptions: {
+	          position: google.maps.ControlPosition.LEFT_TOP
+	        },
+	        streetViewControl: false,
+	        scaleControl: false,
+	        overviewMapControl: false,
+	        center: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1])
+	      };
+
+
+
+	      map = new google.maps.Map(mapEl, mapOptions);
+
+	      var marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1]),
+	        map: map,
+	        icon: "img/icons/map-marker.png",
+	        title: 'marker'
+	      });
+
+	      map.setOptions({
+	        styles: mapStyles,
+	        disableDefaultUI: true
+	      });
+
+	      var transitLayer = new google.maps.TransitLayer();
+	      transitLayer.setMap(map);
+
+	      var bicyclingLayer = new google.maps.BicyclingLayer();
+	      bicyclingLayer.setMap(map);
+
+	      
+
+	      var infowindow = new google.maps.InfoWindow({
+	        content: properties.description
+	      });
+
+	      google.maps.event.addListener(marker, 'click', function() {
+	        infowindow.open(map, marker);
+	      });
+	      
+	    }
+
+	    for (var i = 0; i < mapEls.length; i++) {
+	    	initialize(mapEls[i], dotsArray[i]);
+	    }
+
+	    //google.maps.event.addDomListener(window, 'load', initialize);
+
+	  }
+
+  </script>
 </body>
 
 </html>

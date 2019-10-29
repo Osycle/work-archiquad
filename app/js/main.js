@@ -76,22 +76,8 @@
 			navText : owlBtn,
 			margin: 30
 		});
-		$(".compl-items.owl-carousel").owlCarousel({
-			nav: true,
-			//items: 3,
-			dots: false,
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: false,
-			responsive:{
-				0:{items:1},
-				991:{items:3}
-			},
-			navText : owlBtn,
-			margin: 30
-		});
 
-		/*$(".certifications-items.owl-carousel").owlCarousel({
+		$(".certifications-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
 			dots: false,
@@ -100,12 +86,33 @@
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},
-				991:{items:4}
+				991:{items:3}
 			},
 			navText : owlBtn,
 			margin: 30
 		});
-		*/
+		window.albumMainCarousel = $(".album-main-items.owl-carousel").owlCarousel({
+			nav: checkSm(),
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: false,
+			animateOut: 'fadeOut',
+			smartSpeed:450,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:1}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+
+		$(".album-items figure").on("click", function(){
+			var index = $(this).index();
+			albumMainCarousel.trigger('to.owl.carousel', [index]);
+		})
+			
 		if( $(".owl-nav-style-1").length > 0 ){
 			$(".owl-nav-style-1").map(function( i, el ){
 				$(el).find(".owl-prev").after($(el).find(".owl-dots"));
@@ -113,7 +120,6 @@
 			
 		}
 		
-
 
 
 		/*FANCYBOX*/
@@ -155,6 +161,64 @@
 			});
 
 
+
+
+	//VERTICAL CAROUSEL
+	var jcarouselWrapper = $('.jcarousel-wrapper') || null;
+	if (jcarouselWrapper)
+		for( var i =  0; i < jcarouselWrapper.length; i++ ){
+			
+			jcarouselWrapper.eq(i).find(".jcarousel")
+				.jcarousel({
+		      vertical: checkSm() ? true : true,
+		      wrap: 'both',
+		       animation: {
+			        duration: 600,
+			        easing:   'linear',
+			        complete: function() {
+			        }
+			    },
+		      center: false
+		    })
+				.on('jcarousel:targetin', 'figure', function( event, carousel ) {
+				    $(this).addClass('active');
+				    var index = $(this).index();
+				})
+				.on('jcarousel:targetout', 'figure', function( event, carousel ) {
+						$(this).removeClass('active');
+				})
+
+				jcarouselWrapper.eq(i).find(".jcarousel").jcarousel('scroll', '0');
+				jcarouselWrapper.eq(i).find(".jcarousel").jcarousel('fullyvisible');
+
+
+			// CONTROLS
+			var prevNext = jcarouselWrapper.eq(i).find(".jcarousel-prev-next");
+
+			//prev
+			prevNext.find(".jcarousel-control-prev")
+			  .on('jcarouselcontrol:active', function() {
+	          $(this).removeClass('inactive');
+	      })
+	      .on('jcarouselcontrol:inactive', function() {
+	          $(this).addClass('inactive');
+	      })
+	      .jcarouselControl({
+	          target: '-=1'
+	      });
+
+	     //next
+	    prevNext.find(".jcarousel-control-next")
+	      .on('jcarouselcontrol:active', function() {
+	          $(this).removeClass('inactive');
+	      })
+	      .on('jcarouselcontrol:inactive', function() {
+	          $(this).addClass('inactive');
+	      })
+	      .jcarouselControl({
+	          target: '+=1'
+	      });
+		}//:end for;
 
 		//MIN-MENU
 		$("#min-menu").mmenu({
@@ -206,10 +270,10 @@
 				initialIndex: 0,
 				friction: 0.5,
 				//selectedAttraction: 1,
-				prevNextButtons: !checkSm(),
+				prevNextButtons: true,
 				draggable: false,
 				wrapAround: true,
-				pageDots: true,
+				pageDots: !checkSm(),
 				contain: false,
 				percentPosition: true,
 				cellSelector: 'figure',

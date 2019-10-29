@@ -34,11 +34,15 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	position: relative;
-	height: $header-top-height;
+	height: 100px;
 	transition: height 0.3s ease-in-out 0.4s;
 	display: none;
+	background-color: $color-gray-1;
 	@media ( max-width: 991px ){
 		height: 70px;
+		display: block;
+	}
+	&.block{
 		display: block;
 	}
 }
@@ -122,6 +126,9 @@ $header-min-menu: 70px;
 		height: 80vh;
 		height: calc(100vh - 100px);
 		overflow-y: auto;
+		@media (max-width: 991px){
+			height: calc(100vh - 90px);
+		}
 	}
 	.wrapper{
 		position: relative;
@@ -144,6 +151,10 @@ $header-min-menu: 70px;
 			transform: translateX(100%);
 		}
 	}
+	@media (max-width: 991px) {
+		width: 90%;
+		width: calc(100% - 30px);
+	}
 }
 .menbar-logo{
 	.img{
@@ -152,6 +163,14 @@ $header-min-menu: 70px;
 		height: 100px;
 		margin-left: auto;
 		margin-right: auto;
+			
+	}
+	@media (max-width: 991px){
+		padding: 10px 30px;
+		.img{
+			width: 70%;
+			height: 70px;
+		}
 	}
 }
 .menbar-menu{
@@ -233,7 +252,11 @@ $header-min-menu: 70px;
 	}
 }
 
-
+.header-pages{
+	.header-top{
+		background-color: $color-gray-1;
+	}
+}
 
 .header-scroll{
 	.header-top{
@@ -251,7 +274,7 @@ $header-min-menu: 70px;
 	.header-top, .header-top-content, .header-bottom, .header-bottom-content, .header-logo img, .header-logo{
 		transition: all 0.5s ease; 	
 	}
-	&.scrolled, &.header-pages{
+	&.scrolled{
 		.header-logo{
 			@extend .filter-black;
 		}
