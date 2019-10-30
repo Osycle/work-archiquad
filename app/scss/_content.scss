@@ -1027,11 +1027,11 @@ figcaption{
 		.img-content{
 			margin-left: -75px;
 			img{
-				
+				width: 100%;
 			}
 		}
 		.text-content{
-			margin-left: -50px;
+			margin-left: 0;
 		}
 	}
 	@media (max-width: 991px) {
@@ -1040,12 +1040,12 @@ figcaption{
 			margin-bottom: 20px;
 		}
 	}
-	.socials{
-		margin-top: 20px;
-		font-size: 20px;
-		text-align: center;
-		color: black;
-	}
+}
+.socials{
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: center;
+	color: inherit;
 }
 
 
@@ -1229,7 +1229,9 @@ figcaption{
 
 
 
-
+.height-1{
+	height: 450px;
+}
 //portfolio
 .portfolio-items{
 	figure{
@@ -1261,15 +1263,66 @@ figcaption{
 	.img{
 		height: 280px;
 		background-size: cover;
-		&.height-1{
-			height: 450px;
-		}
 	}
+
 	@media (min-width: 992px){
-		.col-md-8{
+		figure:nth-child(8n+5){
+			width: 66.66667%;
+			.img{
+				height: 450px;
+			}
 			& + figure{
+				.img{
+					height: 450px;
+				}
 				margin-top: -155px;
 			}	
+		}
+	}
+}
+
+
+
+
+
+.portfolio{
+	.list{
+		display: flex;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		li{
+			display: inline-block;
+			width: 100%;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			text-align: center;
+			a{
+				display: block;
+				padding: 15px 30px;
+				border: 1px solid #ebebeb;
+			}
+			&.active, &:hover{
+				background-color: $color-1;
+				color: white;
+			}
+		}
+		@media (max-width: 991px) {
+			flex-direction: column;
+		}
+	}
+	.tab-content{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.link-content{
+		text-align: center;
+		font-weight: 800;
+		margin-top: 20px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		i{
+			display: block;
+			margin-top: 10px;
 		}
 	}
 }

@@ -962,16 +962,15 @@ textarea.form-control{
 
 
 .form-def{
-	background-color: $color-3;
-	color: white;
+	background-color: white;
+	color: black;
 	overflow: visible;
 	max-width: 370px;
 	@media (min-width: 992px){
 		max-width: 470px;
 	}
 	h2{
-		font-size: em(18);
-		text-transform: uppercase;
+		
 	}
 	input{
 		&:focus{
@@ -979,7 +978,7 @@ textarea.form-control{
 		}
 	}
 	.fancybox-close-small{
-		background: $gradient-1;
+		background: $color-1;
 		top: 10px;
 		width: 36px;
 		height: 36px;
