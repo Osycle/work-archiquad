@@ -252,7 +252,12 @@
 		}, {});
 
 
+		$(".menbar").on("click", function(e){
 
+			console.log(e.target );
+			if( $(e.target).hasClass("opened") )			
+				$(".opened [data-toggle-menbar]").trigger("click");
+		});
 
 
 

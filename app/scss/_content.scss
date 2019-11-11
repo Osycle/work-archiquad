@@ -172,15 +172,11 @@ figcaption{
 
 
 .lang{
-	position: absolute;
-	@extend .trans-h-center;
 	text-align: right;
 	bottom: 0;
-	z-index: 23;
+	z-index: 2;
+	font-size: 0.85em;
 	pointer-events: none;
-	@media (max-width: 991px) {
-		display: none;
-	}
 	*{
 		pointer-events: auto;
 	}
@@ -197,7 +193,7 @@ figcaption{
 		list-style: none;
 		&.active{
 			a{
-				background-color: $color-1;
+				background-color: $color-2;
 			}
 		}
 	}
@@ -568,15 +564,18 @@ figcaption{
 		overflow: hidden;
     font-weight: 700;
     font-size: 4.4em;
-    height: 35px;
+    //height: 35px;
     padding-right: 10px;
-    line-height: 70%;
+    //line-height: 70%;
 	}
 	.text{
 		font-size: 1.2em;
 	}
 }
 .short-advantages-items{
+	@media (max-width: 991px) {
+		text-align: left;
+	}
 	figure{
   	perspective-origin: 0 50%;
   	perspective: 500px;
@@ -604,15 +603,17 @@ figcaption{
 			&:hover{
 				background-color: $color-1;
 				color: white;
-				transform: rotateY(15deg) translateY(-3px);
-				box-shadow: inset 0 0 40px -2px rgba(white, 1), 0 0 20px -2px rgba(black, 0.4);
-				text-shadow: -0px -19px 15px white, 55px 19px 15px white;
-				.desc-content{
-					transform: translateZ(50px) rotateY(5deg);
-				}
-				.img-content{
-					transform: translateZ(90px) rotateY(15deg);
-				}
+				// background-color: $color-1;
+				// color: white;
+				// transform: rotateY(15deg) translateY(-3px);
+				// box-shadow: inset 0 0 40px -2px rgba(white, 1), 0 0 20px -2px rgba(black, 0.4);
+				// text-shadow: -0px -19px 15px white, 55px 19px 15px white;
+				// .desc-content{
+				// 	transform: translateZ(50px) rotateY(5deg);
+				// }
+				// .img-content{
+				// 	transform: translateZ(90px) rotateY(15deg);
+				// }
 			}
 		}
 	}
@@ -636,6 +637,16 @@ figcaption{
 			@media (max-width: 991px) {
 				display: none;
 			}
+	}
+	.btn-def{
+		&:before{
+			width: 25px;
+		}
+		a{
+			span{
+				display: inline-block;
+			}
+		}
 	}
 	.right-block{
 		.img{
@@ -721,7 +732,8 @@ figcaption{
 }
 .short-partners-items{
 	.img{
-		height: 200px;
+		background-size: contain;
+		height: 100px;
 	}
 }
 

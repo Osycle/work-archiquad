@@ -130,6 +130,18 @@ $header-min-menu: 70px;
 			height: calc(100vh - 90px);
 		}
 	}
+	.lang{
+		text-align: center;
+		li{
+			display: inline-block;
+		}
+		@media (min-width: 992px) {
+			display: none;
+		}
+	}
+	.flex-adaptive.m-v-30{
+		margin-top: 10px;
+	}
 	.wrapper{
 		position: relative;
 		background-color: $color-1;
@@ -159,7 +171,7 @@ $header-min-menu: 70px;
 .menbar-logo{
 	.img{
 		background-size: contain;
-		width: 270px;
+		width: 200px;
 		height: 100px;
 		margin-left: auto;
 		margin-right: auto;
@@ -236,6 +248,9 @@ $header-min-menu: 70px;
 	top: 30px;
 	transition-delay: 0.2s;
 	left: -20px;
+	i{
+		font-size: 16px;
+	}
 }
 
 
