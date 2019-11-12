@@ -237,8 +237,8 @@ $header-min-menu: 70px;
 }
 .menbar-btn-toggle{
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 	background-color: white;
 	color: $color-1;
 	display: flex;
@@ -250,6 +250,19 @@ $header-min-menu: 70px;
 	left: -20px;
 	i{
 		font-size: 16px;
+		&:before, &:after{
+			content: "";
+			height: 2px;
+			position: absolute;
+			width: 15px;
+			left: 10px;
+			transform: rotate(45deg);
+			transform-origin: 50%;
+			background-color: $color-1;
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
 	}
 }
 

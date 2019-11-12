@@ -8435,8 +8435,8 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
 
 .menbar-btn-toggle {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   color: #001232;
   display: -webkit-box;
@@ -8459,6 +8459,23 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
   left: -20px; }
   .menbar-btn-toggle i {
     font-size: 16px; }
+    .menbar-btn-toggle i:before, .menbar-btn-toggle i:after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      width: 15px;
+      left: 10px;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+      transform-origin: 50%;
+      background-color: #001232; }
+    .menbar-btn-toggle i:after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
 
 @media (min-width: 992px) {
   .header-info {
