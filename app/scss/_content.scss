@@ -1054,10 +1054,14 @@ figcaption{
 	}
 }
 .socials{
+	line-height: 100%;
 	margin-top: 20px;
 	font-size: 20px;
 	text-align: center;
 	color: inherit;
+	.fa{
+		font-size: 23px;
+	}
 }
 
 

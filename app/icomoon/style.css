@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?8a59x5');
-  src:  url('fonts/icomoon.eot?8a59x5#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?8a59x5') format('truetype'),
-    url('fonts/icomoon.woff?8a59x5') format('woff'),
-    url('fonts/icomoon.svg?8a59x5#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?b51tgk');
+  src:  url('fonts/icomoon.eot?b51tgk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b51tgk') format('truetype'),
+    url('fonts/icomoon.woff?b51tgk') format('woff'),
+    url('fonts/icomoon.svg?b51tgk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,48 +25,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icm-phone-call:before {
+.icm-phonebook:before {
   content: "\e900";
 }
-.icm-project:before {
+.icm-phone-call:before {
   content: "\e901";
 }
-.icm-ruler:before {
+.icm-project:before {
   content: "\e902";
 }
-.icm-address:before {
+.icm-ruler:before {
   content: "\e903";
 }
-.icm-calendar:before {
+.icm-address:before {
   content: "\e904";
 }
-.icm-customer-service:before {
+.icm-calendar:before {
   content: "\e905";
 }
-.icm-download-arrow:before {
+.icm-customer-service:before {
   content: "\e906";
 }
-.icm-email:before {
+.icm-download-arrow:before {
   content: "\e907";
 }
-.icm-envelope:before {
+.icm-email:before {
   content: "\e908";
 }
-.icm-facebook:before {
+.icm-envelope:before {
   content: "\e909";
 }
-.icm-home:before {
+.icm-facebook:before {
   content: "\e90a";
 }
-.icm-instagram:before {
+.icm-home:before {
   content: "\e90b";
 }
-.icm-lamp:before {
+.icm-instagram:before {
   content: "\e90c";
 }
-.icm-payment-method:before {
+.icm-lamp:before {
   content: "\e90d";
 }
-.icm-phonebook:before {
+.icm-payment-method:before {
   content: "\e90e";
 }
