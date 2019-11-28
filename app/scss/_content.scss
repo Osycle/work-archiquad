@@ -934,6 +934,9 @@ figcaption{
 			height: 550px;
 			width: 60vw;
 			left: -20vw;
+			@media (max-width: 991px){
+				display: none;
+			}
 		}
 	}
 }

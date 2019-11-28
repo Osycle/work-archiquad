@@ -7736,6 +7736,9 @@ table {
       color: white; }
       .btn-def:not(.changecolor-none):before, .btn-icon:not(.changecolor-none):before {
         width: 100%; } }
+  @media (max-width: 991px) {
+    .btn-def, .btn-icon {
+      background-color: #001232; } }
   .btn-def.icon-right span, .btn-icon.icon-right span {
     vertical-align: middle; }
   .btn-def.icon-right i, .btn-icon.icon-right i {
@@ -9924,6 +9927,9 @@ figcaption {
   height: 550px;
   width: 60vw;
   left: -20vw; }
+  @media (max-width: 991px) {
+    .certifications .entry-header:before {
+      display: none; } }
 
 .certifications-items .img-content:before, .certifications-items .img-content:after {
   opacity: 0;

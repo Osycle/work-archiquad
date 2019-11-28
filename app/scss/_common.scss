@@ -674,6 +674,9 @@ table {
 			}
 		}
 	}
+	@media (max-width: 991px) {
+		background-color: $color-1;
+	}
 	&.icon-right{
 		span{
 			vertical-align: middle;
